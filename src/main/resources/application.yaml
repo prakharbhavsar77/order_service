@@ -1,0 +1,25 @@
+
+server:
+  port: 8082
+spring:
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:5432/order_db
+        username: postgres
+        password: prakhar
+        
+    jpa:
+     database-platform: org.hibernate.dialect.PostgreSQLDialect
+     hibernate:
+            ddl-auto: update
+            
+    application:
+     name: ORDER-SERVICE
+     
+    config:
+       import: configserver:http://localhost:9296
+  
+  
+
+            
+            
